@@ -1,0 +1,21 @@
+<template name="menuMobile">
+	<div class="menu-wrap page-scroll">
+		<div class="main-menu">
+			<h4 class="title-menu">Main menu</h4>
+			<button class="close-button" id="close-button"><i class="fa fa-times"></i></button>
+		</div>
+		<ul class="nav-menu">
+			<li class="selected active"><a href="/">Home</a></li>
+			<li><a href="/#about">About us</a></li>
+			<li><a href="#timetable">Timetable</a></li>
+			<li><a href="/trainers">Trainers</a></li>
+			<li><a href="/#ourteam">Our team</a></li>
+			{{#if currentUser}}
+				<li><a href="/" id="signOut"><i class="fa fa-power-off fa-fw pull-right"></i>Log Out</a></li>
+			{{else}}
+				<li><a href="/login">Log in</a></li>
+				<li class="sign-up"><a href="/signup">Sign up</a></li>
+			{{/if}}
+		</ul>
+	</div>
+</template>

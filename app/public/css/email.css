@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+body, .wrapper {
+	font-size: 12px;
+	line-height: 24px;
+	font-weight: normal;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	background-color: #242424;
+	background: none repeat scroll 0 0 #242424;
+	color: #fff;
+}
+
+i {
+	z-index: 9999;
+}
+
+div, span, p, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.content-container {
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.wrapper .container {
+	padding-left: 0px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.logo {
+	padding-left: 15px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.logo h3.ms-layer.hps-title1 {
+	margin-right: 15px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.page-content {
+	padding-top: 40px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.our-team-head {
+	padding-left: 0px;
+	background: none repeat scroll 0 0 #242424;
+	background-color: #242424;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.our-team-head > .container {
+	padding-left: 0px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.headding-title h4 {
+	font-size: 18px ;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.headding-message, .headding-contact {
+	background: none repeat scroll 0 0 #242424;
+	background-color: #242424;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+.icon-headding {
+	line-height: 35px;
+}
+
+.headding-content p {
+	font-size: 12px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.page-footer {
+	background-color: rgba(238, 238, 238, 0);
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.page-footer .container {
+	padding-left: 0px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.page-footer .infomation {
+	background: none repeat scroll 0 0 #242424;
+	background-color: #242424;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+
+.social_icon a {
+	height: 37px;
+	max-height: 37px;
+	line-height: 0px;
+	font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+	color: #fff;
+}
+.social_icon a > i {
+	min-height: 20px;
+}
+

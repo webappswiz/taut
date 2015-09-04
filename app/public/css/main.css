@@ -1,0 +1,194 @@
+/*****************************************************************************/
+/* main: Style */
+/*****************************************************************************/
+.main {
+}
+
+span.danger {
+    color: #ec3642;
+}
+
+.avatar .avatar-image {
+    background-color: initial !important;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.logo h3.ms-layer.hps-title1 {
+	margin-right: 32px;
+}
+
+div#contents-main.account {
+	margin-top: 94px !important;
+	position: initial;
+}
+
+a.link-menu.sign-up {
+	border: 2px solid;
+	padding: 5px;
+	margin-top: 23px;
+}
+
+ul.nav-menu li.dropdown {
+	margin-top: 22px;
+}
+
+.user-menu a.dropdown-toggle {
+	margin: 15px 0 15px 0;
+	background-color: initial;
+}
+
+.img-profile1.avatar {
+	padding-left: 44px;
+	padding-top: 12px;
+}
+
+.img-profile1.avatar img {
+	margin-bottom: -22px;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+
+.profile-content .btn-cart {
+	width: 170px;
+}
+
+.profile-content button.button.btn-cart > span {
+	width: initial;
+}
+
+section.calendar.account {
+	padding-top: 48px;
+}
+
+.calendar.account .calendar-title {
+	padding-bottom: 10px;
+	background: initial;
+	text-align: initial;
+}
+
+.calendar.account .calendar-body {
+	margin-left: -15px;
+}
+
+.time-event .add-to-box {
+	text-align: center;
+}
+
+.add-to-box p.event-text {
+	margin-top: -10px;
+}
+
+.checkbox.profile {
+	float: left;
+}
+
+label.label-profile {
+	width: initial !important;
+	padding-left: 10px !important;
+}
+
+.profile-details input[type="text"] {
+	background-color: rgba(255,255,255,0);
+	width: 95%;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.calendar-event select {
+	background: none repeat scroll 0 0 #232323;
+	border: 1px solid #393939;
+	color: #9a9a9a;
+	height: 33px;
+	line-height: 33px;
+	margin-bottom: 25px;
+	padding-left: 12px;
+	width: 100%
+}
+
+.bootstrap-timepicker-widget.dropdown-menu {
+	z-index: 9999 !important;
+	background-color: #242424;
+}
+
+.bootstrap-timepicker-widget.dropdown-menu input {
+	background-color: #242424;
+	font-size: 12px;
+	border-color: #242424;
+}
+
+.btn-group ul.dropdown-menu {
+	border-radius: 0;
+	background-color: #ec3642;
+}
+
+.dropdown-menu > li > a {
+	color: white;
+}
+
+.about-top {
+	background: url("../images/bg-position-3.png") repeat-x scroll center top transparent;
+	padding-bottom: 30px;
+	position: relative;
+	background-size:100% auto;
+}
+
+/*
+ | Fullcalendar
+ */
+.fc-unthemed .fc-today {
+  background: #cccccc;
+}
+
+td.fc-day-number.fc-sun.fc-today.fc-state-highlight {
+    color: black;
+}
+
+.fc-bg > table {
+	background-color: transparent;
+}
+
+.fc-event {
+	border-radius: 0px !important;
+	border: 1px solid #ec3642 !important;
+	background-color: #ec3642 !important;
+}
+
+.calendar.account .modal-content {
+	background-color: #242424;
+	border-radius: 0px;
+}
+
+.calendar.account .modal-header {
+	background-color: #ec3642;
+	border-bottom: 0;
+}
+
+.calendar-content .modal-content button.btn {
+	border-radius: 0;
+	background-color: #ec3642;
+	border: 0;
+}
+
+button#saveEvent,
+button#attendSession {
+    width: 128px;
+}
+
+button.btn.btn-cart.dropdown-toggle {
+    float: right;
+    height: 35px;
+}
+
+.popular-event .news-time p span {
+    text-transform: capitalize;
+}
+
+.news-info .add-to-box {
+    color: white;
+}

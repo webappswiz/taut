@@ -1,0 +1,34 @@
+<template name="trainers">
+	<!--Banner-->
+	<section class="page-heading">
+		<div class="title-slide">
+			<div class="container">
+				<div class="banner-content slide-container">
+					<div class="page-title">
+						<h3>Our Trainers</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End Banner-->
+	<div class="page-content">
+		<!-- Main Content -->
+		<div class="main-content">
+			<div class="container">
+				<div class="row">
+				{{#if ourTrainers}}
+					<section id="our-trainers" class="our-trainers">
+						{{#each ourTrainers}}
+							{{> trainer}}
+						{{/each}}
+					</section>
+				{{else}}
+					<h3>Sorry, no trainers available.</h3>
+				{{/if}}
+				</div>
+			</div>
+		</div>
+		<!-- Main Content -->
+	</div>
+</template>

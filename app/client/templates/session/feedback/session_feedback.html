@@ -1,0 +1,50 @@
+<template name="sessionFeedbackModal">
+	<!-- Regular Modal -->
+	<div id="sessionFeedbackModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="modal-title"><strong>Congrats!</strong></h3>
+				</div>
+				<div class="modal-body">
+					<!-- Feedback Form -->
+					<h3 class="text-center">Your video session is over, hope you both had a blast! :)</h3>
+					{{#if otherParty}}
+						{{> modalUser otherParty}}
+					{{/if}}
+					<h3 class="text-center"><small>But this is not the end, my friend... We'd really like you to leave a feedback for your companion, so we can improve your future experience.</small></h3>
+					<form id="feedbackForm" class="form-bordered">
+						<div class="col-md-12 col-xs-12 feedback-group">
+							<div class="form-group">
+								<label class="control-label">1. Please rate how satisfied you are with this session overall:</label>
+								<div class="btn-group feedback-rate-button-wrap">
+									<button type="button" class="btn btn-default dropdown-toggle feedback-rate-button" data-toggle="dropdown" aria-expanded="false">
+										<span class="feedback-rate-button-title">{{feedbackRateButtonTitle}}</span><span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a id="feedbackExcelent" class="feedbackSelect" href="#">Excellent</a></li>
+										<li><a id="feedbackVeryGood" class="feedbackSelect" href="#">Very good</a></li>
+										<li><a id="feedbackGood" class="feedbackSelect" href="#">Good</a></li>
+										<li><a id="feedbackSufficient" class="feedbackSelect" href="#">Sufficient</a></li>
+										<li><a id="feedbackUnsatisfactory" class="feedbackSelect" href="#">Unsatisfactory</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label">2. Please add any additional feedback for your session companion:</label>
+								<textarea class="form-control feedback-textarea" rows="5" id="comment" placeholder="Enter additional feedback here..."></textarea>
+							</div>
+						</div>
+					</form>
+					<!-- END Feedback Form -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-effect-ripple btn-danger" data-dismiss="modal">Later...</button>
+					<button id="feedbackSubmit" type="button" class="btn btn-effect-ripple btn-primary" {{disabledSubmit}}>Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Regular Modal -->
+</template>

@@ -1,0 +1,39 @@
+<template name="AccountsCustomSignUp">
+	<!-- Register Form -->
+	<form id="signUpForm" action="/sign-up" method="post" class="form-horizontal">
+		<p>If you are a new customer please enter your details in the boxes below. If you have trained with us before, please proceed to <a class="show-sign-in" href="#" id="showSignIn">Log In</a>.</p>
+
+		<div class="row">
+			<div class="col-md-6">
+				<input type="text" id="username" name="username" class="input-text" placeholder="Username">
+			</div>
+			<div class="col-md-6">
+				<input type="text" id="email" name="email" class="input-text" placeholder="Email">
+			</div>
+		</div>
+	{{#if AccountsCustom.signUpWithPasswordsAllowed}}
+		<div class="row">
+			<div class="col-md-6">
+				<input type="password" id="password" name="password" class="input-text" placeholder="Password">
+			</div>
+			<div class="col-md-6">
+				<input type="password" id="passwordConfirm" name="passwordConfirm" class="input-text" placeholder="Confirm New Password">
+			</div>
+		</div>
+	{{else}}
+		<span class="help-block">We'll send you an email with the link to continue sign up process.</span>
+	{{/if}}
+		<div class="row">
+			<div class="col-md-6">
+				<button type="submit" title="Log in" class="button">
+					<em class="fa-icon"><i class="fa fa-unlock"></i></em>
+					<span>Sign Up</span>
+				</button>
+			</div>
+			<div class="col-md-6">
+				<span class="help-block text-right"><a class="show-sign-in" href="#" id="showSignIn">Already a member?</a></span>
+			</div>
+		</div>
+	</form>
+	<!-- END Register Form -->
+</template>

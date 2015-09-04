@@ -1,0 +1,74 @@
+<template name="session">
+	<div class="container">
+		<ul id="gn-menu" class="gn-menu-main">
+			<li class="gn-trigger">
+				<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+				<nav class="gn-menu-wrapper">
+					<div class="gn-scroller">
+						<ul class="gn-menu">
+							<!-- li class="videoToggle" style="display: none;"><a id="LT_videoToggle" href="javascript:showVideo(event);" class="fc-icon fc-icon-facetime-video">Video Chat</a></li>
+							<li class="boardToggle"><a id="LT_boardToggle" href="javascript:showBoard(event);" class="fc-icon fc-icon-canvas">Drawing Board</a></li>
+							<li class="filesToggle"><a id="LT_filesToggle" href="javascript:showFiles(event);" class="gn-icon gn-icon-archive">Files</a></li>
+							<li class="settingsToggle"><a id="LT_settingsToggle" href="javascript:showSettings(event);" class="gn-icon gn-icon-cog">Settings</a></li>
+							<li class="helpToggle"><a id="LT_helpToggle" href="javascript:showHelp(event);" class="gn-icon gn-icon-help">Help</a></li -->
+							<li class="sessionQuit"><a id="LT_sessionQuit" href="javascript:sessionQuit();" class="fc-icon fc-icon-exit" title="Quit Session">Quit</a></li>
+						</ul>
+					</div><!-- /gn-scroller -->
+				</nav>
+			</li>
+			<li><a id="LT_sessionControl" class="fc-icon fc-icon-narrow fc-icon-pause" href="#" title="Pause Session"></a></li>
+			<li>
+				<a class="fc-icon fc-icon-narrow fc-icon-clock" href="#">
+				<!-- ?php if ($this->showTimer) : ? --><span class="LT_timer" title="Session time"></span><span class="LT_timerTotal" title="Scheduled time"></span><!-- ?php endif; ? -->
+				<!-- ?php if ($this->showPrice) : ? --><!-- span class="LT_price" title="Total price"></span><span class="LT_priceTotal" title="Paid price"></span --><!-- ?php endif; ? -->
+				</a>
+			</li>
+			<!-- li><span class="fc-title">{{sessionTitle}}</span></li -->
+			<li><span class="LT_infoMessage fc-title"></span></li>
+			<!-- li id="fc-menu">
+				<a href="#"><span class="LT_chatStatus">★</span></a>
+				<nav class="fc-menu-wrapper">
+					<ul class="gn-menu">
+						<li><a class="fc-icon fc-icon-user"><span class="LT_otherParty">(Unknown)</span></a></li>
+					</ul>
+					<div class="LT_messages gn-scroller">
+						<ul class="gn-menu">
+							<li>
+								<ul class="LT_messagesList gn-submenu"></ul>
+							</li>
+						</ul>
+					</div>
+					<ul class="LT_messageInput gn-menu">
+						<li class="fc-message-item">
+							<input type="text" class="LT_messageInputField fc-message" placeholder="New Message...">
+							<a class="fc-icon fc-icon-quill"></a>
+						</li>
+					</ul>
+				</nav>
+			</li -->
+		</ul>
+
+		<div id="pt-main" class="pt-perspective">
+			<div class="pt-page pt-page-1">
+				<!-- div class="LT_video hidden" -->
+				<div class="LT_video" style="display: block;">
+					{{#if isPrivateSession }}<div id="LT_videoStream" class="LT_videoStream"></div>{{/if}}
+				</div>
+				<header class="LT_videoConnecting" style="display: block;">
+					<h1 style="position: relative;">CrossBit<span>Video Chat</span></h1>
+					<div style="position: relative; float: left;"><a href="#" class="fc-icon fc-icon-facetime-video" style="color: white; font-size: 48px;"><span>Here</span></a></div>
+					<div style="position: relative; float: left; top: -4px;">
+						<div class="spinner">
+							<div class="bounce1"></div>
+							<div class="bounce2"></div>
+							<div class="bounce3"></div>
+						</div>
+					</div>
+					<div style="position: relative; float: left;"><a href="#" class="fc-icon fc-icon-facetime-video fc-mirrored" style="color: white; font-size: 48px;"><span>There</span></a></div>
+				</header>
+			</div>
+		</div>
+
+		{{#if isPrivateSession }}<div id="LT_videoCamera" class="LT_videoCamera"></div>{{/if}}
+	</div><!-- /container -->
+</template>

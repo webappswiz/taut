@@ -1,0 +1,28 @@
+<template name="attendingEvents">
+{{#if attendingEvents }}
+	<section class="popular-event event-category">
+		<div class="/*owl-carousel*/" data-nav="t-nav-" data-plugin-options='{"autoPlay":false,"autoHeight":true}'>
+			<div class="years-event">
+				<div class="popular-event-title">
+					<h4>Attending Sessions</h4>
+					<div class="next">
+						<button class="circle icon-wrap t-nav-prev">
+							<!-- i class="fa fa-angle-left"></i -->
+						</button>
+						<button class="circle icon-wrap t-nav-next">
+							<!-- i class="fa fa-angle-right"></i -->
+						</button>
+					</div>
+				</div>
+				<div class="news-content">
+					<ul>
+					{{#each attendingEvents }}
+						{{> attendingEvent }}
+					{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{{/if}}
+</template>

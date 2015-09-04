@@ -1,0 +1,125 @@
+<template name="scheduledEvent">
+	<li class="latest-news-item calendar-event">
+		<form id="scheduleEventForm" name="scheduleEventForm">
+			<div class="experience-main">
+				<div class="experience-spoiler experience-spoiler-opened">
+					<div class="news-item-inner experience-details-title">
+						<div class="news-date">
+							<div class="news-day">{{ eventDay }}</div>
+							<div class="news-month">{{ eventMonth }}</div>
+						</div>
+						<div class="news-info">
+						{{#if isEditable}}
+							<input type="text" id="eventTitle" name="eventTitle" placeholder="Session Title" class="control" value="{{eventTitle}}">
+						{{else}}
+							<div class="news-title">{{ eventTitle }}</div>
+						{{/if}}
+							<div class="news-time">
+							{{#if isEditable }}
+							<div class="row">
+								<div class="col-md-4">
+									<label for="eventTypeSelect">Type of Session:</label>
+									<select id="eventTypeSelect" name="eventTypeSelect" class="state">
+										<option value="public">Public</option>
+										<option value="group">Group</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label for="maxAttendeesSelect">Max # of Attendees:</label>
+									<select id="maxAttendeesSelect" name="maxAttendeesSelect" class="zip-code">
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label for="eventPrice">Price ($):</label>
+									<input type="text" id="eventPrice" name="eventPrice" placeholder="Price ($)" class="control" value="{{eventPrice}}">
+								</div>
+							</div>
+							{{else}}
+								<p class="open-time">{{ eventTime }}</p>
+								<p class="event-text">{{ eventType }}</p>
+								<p class="event-text">${{ eventPrice }}</p>
+							{{/if}}
+							</div>
+						</div>
+					</div>
+					<div class="experience-details-content event-content" style="display: block;">
+						<div class="event-details">
+							<div class="event-title">
+								<i class="fa fa-bars"></i>
+								<h4>Event Details</h4>
+							</div>
+							{{#if isEditable }}
+								<textarea id="eventDetails" name="eventDetails" placeholder="{{detailsPlaceholder}}" rows="4" class="control" value="{{eventDetails}}"></textarea>
+							{{else}}
+								<p class="event-details-text">{{eventDetails}}</p>
+							{{/if}}
+							<!-- a class="more" href="#">More...</a -->
+						</div>
+						<div class="time-location">
+							<div class="time-event">
+								<div class="event-title">
+									<i class="fa fa-clock-o"></i>
+									<h4>Time</h4>
+								</div>
+							{{#if isEditable }}
+								<label for="timepickerStart">Start:</label>
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="timePickerStart" type="text" class="form-control input-small">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+								<label for="timepickerEnd">End:</label>
+								<div class="input-group bootstrap-timepicker timepicker">
+									<input id="timePickerEnd" type="text" class="form-control input-small">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+								</div>
+							{{else}}
+								<p class="event-text">{{eventTime}}</p>
+							{{/if}}
+							</div>
+							<div class="time-event">
+								<div class="add-to-box">
+								{{#if isEditable}}
+									<!-- Split button -->
+									<div class="btn-group">
+										<button id="saveEvent" type="button" class="button btn-cart">
+											<em class="fa-icon"><i class="fa fa-save"></i></em>
+											<span>Save</span>
+										</button>
+										<button type="button" class="btn btn-cart dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<span class="caret"></span>
+											<span class="sr-only">Toggle Dropdown</span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a id="publishSession" href="#">{{ publishTitle }} Session</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a id="cancelSession" href="#">{{ cancelTitle }} Session</a></li>
+											<li><a id="deleteSession" href="#">Delete Session</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a id="cancelEditing" href="#">Cancel editing</a></li>
+										</ul>
+									</div>
+								{{else}}
+									{{#if isCancelled }}
+										<span class="event-cancelled">Cancelled</span>
+									{{else}}
+										<button type="button" id="attendSession" class="button btn-cart" title="{{buttonTitle}} Session" data-event-id="{{eventId}}">
+											<em class="fa-icon"><i class="fa fa-shopping-cart"></i></em>
+											<span id="buttonTitle">{{buttonTitle}}</span>
+										</button>
+									{{/if}}
+								{{/if}}
+									<p class="event-text">&nbsp;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</li>
+</template>

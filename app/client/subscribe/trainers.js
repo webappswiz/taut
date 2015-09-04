@@ -1,0 +1,2 @@
+// Trainers
+Meteor.subscribe( 'trainers' );

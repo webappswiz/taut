@@ -1,0 +1,30 @@
+<template name="trainer">
+	<div class="our-trainer-box col-md-4 col-sm-6 col-xs-12">
+		<div class="product-image-wrapper">
+			<div class="product-content">
+				<div class="product-image product-trainer">
+					<a href="trainer-profile.html"><img src="images/{{randomImage}}.png" alt=""></a>
+				</div>
+				<div class="info-products">
+					<div class="img-trainers">
+						<img src="images/boxing-icon-1.png" alt="">
+					</div>
+					<div class="product-name">
+						<a href="/profile/{{this._id}}">{{ this.username }}</a>
+						<div class="product-bottom"></div>
+					</div>
+					<div class="product-info">
+						<p>{{ this.profile.summary }}</p>
+					</div>
+					<div class="actions">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

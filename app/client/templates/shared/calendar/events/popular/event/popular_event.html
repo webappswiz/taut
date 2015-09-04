@@ -1,0 +1,18 @@
+<template name="popularEvent">
+	<li class="latest-news-item">
+		<div class="news-item-inner">
+			<div class="news-date">
+				<div class="news-day">{{ eventDay }}</div>
+				<div class="news-month">{{ eventMonth }}</div>
+			</div>
+			<div class="news-info">
+				<div class="news-title">
+					<a href="#" id="{{ eventId }}" name="{{ eventId }}">{{ eventTitle }}</a>
+				</div>
+				<div class="news-time">
+					<p>{{ eventTime }} (<span>{{ eventType }}</span> - <span>{{ eventPrice }}</span>)</p>
+				</div>
+			</div>
+		</div>
+	</li>
+</template>

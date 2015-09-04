@@ -1,0 +1,31 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+insecure
+iron:router
+twbs:bootstrap
+fortawesome:fontawesome@4.4.0
+miro:accounts-custom
+accounts-password
+themeteorchef:jquery-validation@1.14.0
+mizzao:jquery-ui
+rzymek:fullcalendar
+momentjs:moment@2.10.6
+utilities:avatar
+accounts-facebook
+momentjs:twix@0.7.2
+email
+meteorhacks:ssr
+miro:uncss
+sacha:juice
+react-meteor-data@0.1.5
+carlodicelico:tokbox
+mizzao:user-status
+miro:notifications
+miro:preloader
+reactive-var
+random

@@ -1,0 +1,25 @@
+<template name="upcomingEvent">
+	<li class="latest-news-item">
+		<div class="news-item-inner">
+			<div class="news-date">
+				<div class="news-day">{{ eventDay }}</div>
+				<div class="news-month">{{ eventMonth }}</div>
+			</div>
+			<div class="news-info">
+				<div class="news-title">
+					<a href="#" id="{{ eventId }}" name="{{ eventId }}">{{ eventTitle }}</a>
+				</div>
+				<div class="news-time">
+					<p>{{ eventTime }}, <span>{{ eventType }}</span> - <span>{{ eventPrice }}</span><span class="danger">{{#if isPublished }}{{else}} NOT Published!{{/if}}</span></p>
+				</div>
+				<div class="add-to-box">
+					<button id="joinSession" name="joinSession" class="button btn-cart" title="Join Now" type="button" data-id="{{ eventId }}">
+						<em class="fa-icon"><i class="fa fa-camera"></i></em>
+						<span>Join Now</span>
+					</button>
+					<!-- a class="link-wishlist"><i class="fa fa-heart"></i></a -->
+				</div>
+			</div>
+		</div>
+	</li>
+</template>

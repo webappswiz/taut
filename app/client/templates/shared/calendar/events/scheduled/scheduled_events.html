@@ -1,0 +1,18 @@
+<template name="scheduledEvents">
+{{#if scheduledEvents }}
+	<div class="event-listing">
+		<ul>
+		{{#each scheduledEvents }}
+			{{> scheduledEvent }}
+		{{/each}}
+		</ul>
+	</div>
+	{{#if canLoadMore }}
+	<div class="col-md-12">
+		<button id="load-more-class" class="load-more">Load More</button>
+	</div>
+	{{/if}}
+{{else}}
+	<p>No sessions scheduled.</p>
+{{/if}}
+</template>

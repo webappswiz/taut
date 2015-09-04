@@ -1,0 +1,30 @@
+<template name="header">
+	<header id="header" class="header header-container alt reveal navbar-custom navbar navbar-fixed-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-3 col-xs-3 logo">
+					<!-- a href="index.html"><img src="/images/logo.png" alt=""/></a -->
+					<h3 class="ms-layer hps-title1" data-ease="easeOutExpo">CrossBit</h3>
+				</div>
+				<div class="col-md-10 nav-container">
+					<nav class="megamenu collapse navbar-collapse navbar-main-collapse navbar-right mainnav col-md-10" role="navigation">
+						<ul class="nav-menu nav navbar-nav">
+							<li class="selected active"><a class="link-menu" href="/">Home</a></li>
+							<li><a class="link-menu" href="/#about">About us</a></li>
+							<li><a class="link-menu" href="/#timetable">Timetable</a></li>
+							<li><a class="link-menu" href="/trainers">Trainers</a></li>
+							<li><a class="link-menu" href="/#ourteam">Our team</a></li>
+							{{#if currentUser}}
+								{{> AccountsCustomSignOut }}
+							{{else}}
+								<li><a class="link-menu" href="/login">Log in</a></li>
+								<li><a class="link-menu sign-up" href="/signup">Sign up</a></li>
+							{{/if}}
+						</ul>
+					</nav>
+				</div>
+				<button class="menu-button" id="open-button"></button>
+			</div>
+		</div>
+	</header>
+</template>

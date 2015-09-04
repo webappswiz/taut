@@ -1,0 +1,30 @@
+<template name="AccountsCustomSignIn">
+	<!-- Login Form -->
+	<form id="signInForm" action="/sign-in" method="post" >
+		<p>If you have trained with us before, please enter your details in the boxes below. If you are a new customer please proceed to <a class="show-sign-up" href="#" id="showSignUp">Sign Up</a>.</p>
+
+		<div class="row">
+			<div class="col-md-6">
+				<input type="text" id="email" name="email" class="input-text" placeholder="Username or email">
+			</div>
+			<div class="col-md-6">
+				<input type="password" id="password" name="password" class="input-text" placeholder="Password">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<button type="submit" title="Log in" class="button">
+					<em class="fa-icon"><i class="fa fa-unlock"></i></em>
+					<span>Log in</span>
+				</button>
+			</div>
+			<div class="col-md-4">
+				<span class="help-block text-center"><a class="show-forgot-password" href="#" id="showForgotPassword">Forgot Password?</a></span>
+			</div>
+			<div class="col-md-4">
+				<span class="help-block text-right"><a class="show-sign-up" href="#" id="showSignUp">No account yet?</a></span>
+			</div>
+		</div>
+	</form>
+	<!-- END Login Form -->
+</template>

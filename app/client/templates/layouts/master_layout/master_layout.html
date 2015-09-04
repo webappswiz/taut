@@ -1,0 +1,29 @@
+<template name="MasterLayout">
+	<div class="wrapper hide-main-content">
+		<section  class="page one-page">
+			<!--Menu Mobile-->
+			{{> menuMobile }}
+			<!-- End Menu Mobile-->
+			<div class="content-wrapper">
+				<div id="home">
+					<!--Header-->
+					{{> header }}
+					<!--End Header-->
+
+					<!-- Main Content -->
+					{{> yield }}
+					<!-- End Main Content -->
+
+				</div>
+			</div>
+		</section>
+
+		<!--Footer-->
+		{{> footer }}
+		<!--End Footer-->
+
+		<!--To Top-->
+		{{> toTop }}
+		<!--End To Top-->
+	</div>
+</template>

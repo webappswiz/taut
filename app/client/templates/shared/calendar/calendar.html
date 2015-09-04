@@ -1,0 +1,14 @@
+<template name="calendar">
+{{#if showEditEvent }}
+	{{> scheduledEventModal }}
+{{/if}}
+
+	<div class="container">
+		<div class="row">
+			<div class="calendar-body col-md-6">
+				<div id="calendar">
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

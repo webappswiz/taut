@@ -1,0 +1,134 @@
+<template name="AccountsCustomLoading">
+{{#if loading}}
+	<div class="accounts-custom-loading {{loading.type}}">
+		<span>{{loading.message}}</span>
+	</div>
+{{/if}}
+</template>
+
+<template name="AccountsCustomMessage">
+{{#if message.type}}
+	<div class="alert alert-dismissable alert-{{message.type}} {{message.type}}">
+	<!--div class="alert alert-{{message.type}} {{message.type}}" -->
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<h4><strong>{{capitalize message.type}}</strong></h4>
+		<p>{{message.message}}</p>
+	</div>
+{{/if}}
+</template>
+
+<template name="AccountsCustomSocialServices">
+{{#if showSocialServices}}
+	{{#if loginServices}}
+		<div class="accounts-custom-social-services">
+			<div class="form-group">
+				{{#each loginServices}}
+					{{> AccountsCustomSocialService}}
+				{{/each}}
+			</div>
+		</div>
+		{{#if showSeparator}}
+			{{> AccountsCustomSeparator}}
+		{{/if}}
+	{{/if}}
+{{/if}}
+</template>
+
+<template name="AccountsCustomSocialService">
+	<div class="col-md-12">
+		<div class="input-group">
+			<span class="input-group-addon{{disabled}}"><i class="fa fa-{{icon}}"></i></span>
+			<button
+				class="btn form-control accounts-custom-social-service{{configured}}{{connected}}{{signup}}{{disabled}}"
+				id="accounts-custom-social-service-{{this}}"
+				name="accounts-custom-social-service-{{this}}"
+			>
+				{{buttonText}}
+			</button>
+		</div>
+	</div>
+</template>
+
+<template name="AccountsCustomSeparator">
+	<div class="centered">
+		<strong class="line-through"><span>- OR -</span></strong>
+	</div>
+</template>
+
+<template name="AccountsCustomPassword">
+	{{#unless AccountsCustom.tokens.emailVerification}}
+		{{#unless AccountsCustom.showResetPassword}}
+			{{#unless AccountsCustom.showSetPassword}}
+				{{#unless currentUser}}
+					{{#unless AccountsCustom.showForgotPassword}}
+						{{#unless AccountsCustom.mergingAccounts}}
+							{{#if AccountsCustom.showSignIn}}
+								{{> AccountsCustomSignIn}}
+							{{else}}
+								{{#if AccountsCustom.showSignUp}}
+									{{> AccountsCustomSignUp}}
+								{{/if}}
+							{{/if}}
+						{{/unless}}
+					{{else}}
+						{{> AccountsCustomForgotPassword}}
+					{{/unless}}
+				{{! else}}
+					{{! > AccountsCustomSignOut}}
+				{{/unless}}
+			{{else}}
+				{{> AccountsCustomSetPassword}}
+			{{/unless}}
+		{{else}}
+			{{> AccountsCustomResetPassword}}
+		{{/unless}}
+	{{/unless}}
+</template>
+
+<template name="AccountsCustom">
+	<!-- Account Block -->
+	<div class="contents-main account" id="contents-main">
+		<div class="product-check-out">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="checkout">
+							<div class="checkout-row row">
+								<div class="log-in col-md-6 col-md-offset-3">
+								{{> accountHeader}}
+									<div class="title">{{> accountTitle}}</div>
+									<!-- Account Form -->
+									{{#unless showLoading}}
+										<div class="box">
+											{{> AccountsCustomMessage}}
+											{{> AccountsCustomSocialServices}}
+											{{> AccountsCustomPassword}}
+										</div>
+									{{else}}
+										{{> AccountsCustomLoading}}
+									{{/unless}}
+									<!-- END Account Form -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END Account Block -->
+
+	{{#if AccountsCustom.showSignUp}}
+		{{! > modalTerms}}
+	{{/if}}
+</template>
+
+<template name="account">
+	{{#unless currentUser}}
+		<!-- Account Container -->
+		<div id="login-container">
+			{{> AccountsCustom}}
+		</div>
+		<!-- END Account Container -->
+	{{/unless}}
+</template>
